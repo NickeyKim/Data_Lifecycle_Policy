@@ -1,0 +1,31 @@
+resources:
+  jobs:
+    data_lifecycle_policy:
+      name: Data Lifecycle Policy
+      tasks:
+        - task_key: Data_Lifecycle_Policy
+          email_notifications: {}
+          for_each_task:
+            inputs: '["nakhoe_uc"]'
+            task:
+              email_notifications: {}
+              notebook_task:
+                base_parameters:
+                  RUN_MODE: DRY_RUN
+                  TARGET_CATALOGS: '{{input}}'
+                notebook_path: ../src/Data Lifecycle Policy.py
+                source: WORKSPACE
+              run_if: ALL_SUCCESS
+              task_key: Data_Lifecycle_Policy_iteration
+              webhook_notifications: {}
+          run_if: ALL_SUCCESS
+          webhook_notifications: {}
+      email_notifications:
+        no_alert_for_skipped_runs: true
+      max_concurrent_runs: 1
+      notification_settings:
+        no_alert_for_skipped_runs: true
+      performance_target: PERFORMANCE_OPTIMIZED
+      queue:
+        enabled: true
+      webhook_notifications: {}
