@@ -2,6 +2,8 @@
 
 A Databricks Asset Bundle project that automatically identifies and truncates stale tables (90+ days without writes) in Unity Catalog, with built-in safety through DRY_RUN mode and exclusion lists.
 
+> **[Korean version (한국어)](README_ko.md)**
+
 ## Overview
 
 This solution scans managed tables within specified Unity Catalog catalogs, checks each table's Delta history for the last write operation, and identifies tables that haven't been written to in over 90 days. It supports two run modes:
