@@ -108,6 +108,8 @@ A **Lakeview dashboard** (`Data Lifecycle Policy Dashboard`) is included and dep
 
 The dashboard definition is stored at `src/data_lifecycle_policy_dashboard.lvdash.json` and configured in `resources/data_lifecycle_policy_dashboard.yml`.
 
+![Data Lifecycle Policy Dashboard](docs/images/dashboard_screenshot.png)
+
 ## Project Structure
 
 ```
