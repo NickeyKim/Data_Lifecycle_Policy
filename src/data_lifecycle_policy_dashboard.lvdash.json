@@ -1,0 +1,1023 @@
+{
+  "datasets": [
+    {
+      "name": "26324756",
+      "displayName": "lifecycle_candidates",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "7667b947",
+      "displayName": "lifecycle_candidates",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "c17eb337",
+      "displayName": "lifecycle_candidates",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "708618e1",
+      "displayName": "lifecycle_candidates",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "e6594a20",
+      "displayName": "lifecycle_candidates",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "e67e1115",
+      "displayName": "lifecycle_exclusions",
+      "queryLines": [
+        "SELECT table_catalog, table_schema, table_name, reason\n",
+        "FROM users.nakhoe_kim.lifecycle_exclusions GROUP BY table_catalog, table_schema, table_name, reason;"
+      ]
+    },
+    {
+      "name": "b656243b",
+      "displayName": "lifecycle_exclusions_schema",
+      "queryLines": [
+        "SELECT * FROM users.nakhoe_kim.lifecycle_exclusions_schema"
+      ]
+    },
+    {
+      "name": "33ec35b6",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "d1b5c0a3",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "b2230c4f",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "e3e6d57f",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "566cfb44",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    },
+    {
+      "name": "6e2e744f",
+      "displayName": "lifecycle_candidates_mig",
+      "queryLines": [
+        "SELECT * FROM \n",
+        "users.nakhoe_kim.lifecycle_candidates\n",
+        "order by scanned_at desc, fqtn;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "2ec4eb72",
+      "displayName": "Data Lifecycle",
+      "layout": [
+        {
+          "widget": {
+            "name": "db95aebb",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Data Lifecycle Policy (90days)\n",
+                "\n",
+                "\uc5ec\uae30\uc5d0 \uc788\ub294 \ubaa8\ub4e0 \ub0b4\uc6a9\uc774 \ub204\uad70\uac00\uc758 \uacf5\uaca9\uc774 \uc544\ub2d8\uc744 \uc720\uc758\ud574\uc8fc\uc2ed\uc2dc\uc624. (Please note that everything here is NOT attack from someone.)\n",
+                "\n",
+                "\uc801\uc6a9\ub41c Data Lifecycle \uc815\ucc45 (\ub370\uc774\ud130 \uc0ad\uc81c)\ub97c \ud655\uc778\ud558\uace0, \uc9c0\uc6cc\uc9c4 \uacb0\uacfc\ub97c \ud655\uc778\ud558\ub294 \ub300\uc2dc\ubcf4\ub4dc\uc785\ub2c8\ub2e4.\n",
+                "<p>&nbsp;</p>\n"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "d17ede87",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## <span style=\"color:#077A9D\">workspace-dev</span>"
+              ]
+            },
+            "specExtensions": {
+              "widgetBorderColor": {
+                "light": "#000000"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "92de6191",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "26324756",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`fqtn` IN (`fqtn`) OR TRUE"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\ucd1d \uac80\uc0ac\ud55c \ud14c\uc774\ube14 \uc218 (Total number of tables inspected)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "b06dc9ba",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "7667b947",
+                  "fields": [
+                    {
+                      "name": "count(is_stale_90d)",
+                      "expression": "COUNT(`is_stale_90d`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "90\uc77c \uc9c0\ub09c \ud14c\uc774\ube14 \uc218 (Number of tables past 90 days)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(is_stale_90d)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 3,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "57cc9bbb",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c17eb337",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`action_executed` IN ('SUCCESS')"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\uc2e4\uc81c \uc0ad\uc81c\ub41c \ud14c\uc774\ube14 \uc218 (Number of actual deleted tables)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "style": {
+                    "rules": [
+                      {
+                        "condition": {
+                          "operator": ">="
+                        },
+                        "color": "#00A972"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "53269d22",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "708618e1",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`action_executed` IN ('SKIPPED')"
+                    },
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Skip\ub41c \ud14c\uc774\ube14 \uc218 (Number of skipped tables)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 5,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "814e96e5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e6594a20",
+                  "fields": [
+                    {
+                      "name": "scanned_at",
+                      "expression": "`scanned_at`"
+                    },
+                    {
+                      "name": "fqtn",
+                      "expression": "`fqtn`"
+                    },
+                    {
+                      "name": "last_write_ts",
+                      "expression": "`last_write_ts`"
+                    },
+                    {
+                      "name": "is_stale_90d",
+                      "expression": "`is_stale_90d`"
+                    },
+                    {
+                      "name": "action_executed",
+                      "expression": "`action_executed`"
+                    },
+                    {
+                      "name": "message",
+                      "expression": "`message`"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    },
+                    {
+                      "expression": "`action_executed` IN ('SUCCESS')"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "rowsPerPage": 25,
+              "displayRowNumbers": false,
+              "frame": {
+                "showTitle": true,
+                "title": "90\uc77c \uacbd\uacfc\ub85c \uc0ad\uc81c\ub41c \uacb0\uacfc \ud14c\uc774\ube14 (Result table deleted after 90 days)"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "scanned_at",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "format": {
+                      "type": "moment.js",
+                      "format": "DD/MM/YYYY HH:mm:ss.SSS"
+                    },
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "fqtn",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "last_write_ts",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "format": {
+                      "type": "moment.js",
+                      "format": "DD/MM/YYYY HH:mm:ss.SSS"
+                    },
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "is_stale_90d",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "action_executed",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "message",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 3,
+            "width": 8,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "d87e0516",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e67e1115",
+                  "fields": [
+                    {
+                      "name": "table_catalog",
+                      "expression": "`table_catalog`"
+                    },
+                    {
+                      "name": "table_schema",
+                      "expression": "`table_schema`"
+                    },
+                    {
+                      "name": "table_name",
+                      "expression": "`table_name`"
+                    },
+                    {
+                      "name": "reason",
+                      "expression": "`reason`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\uc608\uc678\ucc98\ub9ac\ub41c \ud14c\uc774\ube14 (Exception Tables)"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "table_catalog"
+                  },
+                  {
+                    "fieldName": "table_schema"
+                  },
+                  {
+                    "fieldName": "table_name"
+                  },
+                  {
+                    "fieldName": "reason"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "a67b1376",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b656243b",
+                  "fields": [
+                    {
+                      "name": "table_catalog",
+                      "expression": "`table_catalog`"
+                    },
+                    {
+                      "name": "table_schema",
+                      "expression": "`table_schema`"
+                    },
+                    {
+                      "name": "reason",
+                      "expression": "`reason`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\uc608\uc678\ucc98\ub9ac\ub41c \uc2a4\ud0a4\ub9c8 (Exception Schemas)"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "table_catalog"
+                  },
+                  {
+                    "fieldName": "table_schema"
+                  },
+                  {
+                    "fieldName": "reason"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 7,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "3748ff2b",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## <span style=\"color:#00A972\">workspace-mig</span>"
+              ]
+            },
+            "specExtensions": {
+              "widgetBorderColor": {
+                "light": "#000000"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 11,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "83bb5366",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "33ec35b6",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\ucd1d \uac80\uc0ac\ud55c \ud14c\uc774\ube14 \uc218 (Total number of tables inspected)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "c5ea116e",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d1b5c0a3",
+                  "fields": [
+                    {
+                      "name": "count(is_stale_90d)",
+                      "expression": "COUNT(`is_stale_90d`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "90\uc77c \uc9c0\ub09c \ud14c\uc774\ube14 \uc218 (Number of tables past 90 days)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(is_stale_90d)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 12,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "de5ecf15",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b2230c4f",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`action_executed` IN ('SUCCESS')"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "\uc2e4\uc81c \uc0ad\uc81c\ub41c \ud14c\uc774\ube14 \uc218 (Number of actual deleted tables)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "style": {
+                    "rules": [
+                      {
+                        "condition": {
+                          "operator": ">="
+                        },
+                        "color": "#00A972"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "693cb03e",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "e3e6d57f",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`action_executed` IN ('SKIPPED')"
+                    },
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Skip\ub41c \ud14c\uc774\ube14 \uc218 (Number of skipped tables)"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)"
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 14,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "dd42bbd8",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "566cfb44",
+                  "fields": [
+                    {
+                      "name": "scanned_at",
+                      "expression": "`scanned_at`"
+                    },
+                    {
+                      "name": "fqtn",
+                      "expression": "`fqtn`"
+                    },
+                    {
+                      "name": "last_write_ts",
+                      "expression": "`last_write_ts`"
+                    },
+                    {
+                      "name": "is_stale_90d",
+                      "expression": "`is_stale_90d`"
+                    },
+                    {
+                      "name": "action_executed",
+                      "expression": "`action_executed`"
+                    },
+                    {
+                      "name": "message",
+                      "expression": "`message`"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`is_stale_90d` IN (TRUE)"
+                    },
+                    {
+                      "expression": "`action_executed` IN ('SUCCESS')"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "rowsPerPage": 25,
+              "displayRowNumbers": false,
+              "frame": {
+                "showTitle": true,
+                "title": "90\uc77c \uacbd\uacfc\ub85c \uc0ad\uc81c\ub41c \uacb0\uacfc \ud14c\uc774\ube14 (Result table deleted after 90 days)"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "scanned_at",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "format": {
+                      "type": "moment.js",
+                      "format": "DD/MM/YYYY HH:mm:ss.SSS"
+                    },
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "fqtn",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "last_write_ts",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "format": {
+                      "type": "moment.js",
+                      "format": "DD/MM/YYYY HH:mm:ss.SSS"
+                    },
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "is_stale_90d",
+                    "useForSearch": false,
+                    "contentAlignment": "right",
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "action_executed",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "message",
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 12,
+            "width": 8,
+            "height": 10
+          }
+        },
+        {
+          "widget": {
+            "name": "10c7d5b9",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "6e2e744f",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "action_executed",
+                      "expression": "`action_executed`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "\uc0ad\uc81c\ub41c/Skip\ub41c \ud14c\uc774\ube14 (Deleted/Skiped Tables)"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "action_executed",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true,
+                  "text": {
+                    "fieldName": "count(*)"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 16,
+            "width": 4,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}

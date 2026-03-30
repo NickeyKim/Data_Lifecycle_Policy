@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    data_lifecycle_policy_dashboard:
+      display_name: "Data Lifecycle Policy Dashboard"
+      warehouse_id: 30d6e63b35f828c5
+      file_path: ../src/data_lifecycle_policy_dashboard.lvdash.json

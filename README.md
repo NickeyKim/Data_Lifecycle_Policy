@@ -98,15 +98,27 @@ Entire schemas to exclude from scanning.
 | `reason` | STRING | Reason for exclusion |
 | `updated_at` | TIMESTAMP | When the exclusion was added |
 
+## Dashboard
+
+A **Lakeview dashboard** (`Data Lifecycle Policy Dashboard`) is included and deployed as part of the bundle. It visualizes:
+
+- Stale table scan results and candidate counts
+- Action execution status (DRY_RUN / TRUNCATE / SKIP)
+- Historical lifecycle policy run trends
+
+The dashboard definition is stored at `src/data_lifecycle_policy_dashboard.lvdash.json` and configured in `resources/data_lifecycle_policy_dashboard.yml`.
+
 ## Project Structure
 
 ```
 data_lifecycle_policy/
 ├── databricks.yml                              # DAB bundle config (dev/prod targets)
 ├── resources/
-│   └── data_lifecycle_policy.job.yml           # Job definition (for_each_task over catalogs)
+│   ├── data_lifecycle_policy.job.yml           # Job definition (for_each_task over catalogs)
+│   └── data_lifecycle_policy_dashboard.yml     # Lakeview dashboard resource
 ├── src/
-│   └── Data Lifecycle Policy.py                # Main lifecycle policy notebook
+│   ├── Data Lifecycle Policy.py                # Main lifecycle policy notebook
+│   └── data_lifecycle_policy_dashboard.lvdash.json  # Lakeview dashboard definition
 └── scratch/
     └── exploration.ipynb                       # Exploration notebook
 ```
